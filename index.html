@@ -4,9 +4,36 @@
 	<title>angWeather</title>
 </head>
 <body ng-app = "angWeather">
+<section ng-controller = "TestCtrl">
+	<h1>{{title}}</h1>
+	<div>
+		<ul ng-repeat = "test in tests">
+			<li>{{test.name}}</li>
+
+		</ul>
+
+	</div>
+</section>
 
 <ng-view></ng-view>
 <h2>Hello World</h2>
+
+
+
+
+<!-- <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script> -->
+<script>
+  // Initialize Firebase
+  // var config = {
+  //   apiKey: "AIzaSyDpnbWbyR7nyo_FcMW1kdT9gjsJPewOIHQ",
+  //   authDomain: "angweather-8c736.firebaseapp.com",
+  //   databaseURL: "https://angweather-8c736.firebaseio.com",
+  //   storageBucket: "angweather-8c736.appspot.com",
+  // };
+  // firebase.initializeApp(config);
+</script>
+    
+
 
 <script type="text/javascript" src="../lib/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -22,5 +49,7 @@
 
 
 <script type="text/javascript" src="../scripts/app.js"></script>
+<script type="text/javascript" src="../scripts/auth.js"></script>
+
 </body>
 </html>
