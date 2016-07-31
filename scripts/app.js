@@ -23,6 +23,7 @@ app.config(
 						.when('/weathersearch/', {
 						templateUrl: '/partials/weathersearch.html',
 						controller: 'weatherCtrl as WeatherCtrl'
+						})
 						.otherwise({ redirectTo: '/login'});
 			}
 

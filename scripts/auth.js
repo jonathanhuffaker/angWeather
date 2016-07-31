@@ -23,7 +23,7 @@ var auth = angular.module('Authorize', ['firebase']);
 				}).then(function(userData){
 					
 					// Changing what i had originaly to reflect order by child - keeping old for safety
-					var ref = new Firebase("https://angweather-8c736.firebaseio.com/users/"+userData.uid/userinfo);
+					var ref = new Firebase("https://angweather-8c736.firebaseio.com/users/"+userData.uid);
 					ref.set({
 						email: $scope.email,
 						uid: userData.uid
@@ -42,7 +42,7 @@ var auth = angular.module('Authorize', ['firebase']);
 				}).then(function(userData){
 					var ref = new Firebase("https://angweather-8c736.firebaseio.com/");
 					console.log("user logged in with id:" +userData.uid);
-					$location.path("/profile/");
+					$location.path("/weathersearch/");
 				}).catch(function(error){
 					console.log("user not logged with error:" +error);
 				});
