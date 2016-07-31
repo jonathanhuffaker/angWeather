@@ -4,7 +4,9 @@
 	<title>angWeather</title>
 </head>
 <body ng-app = "angWeather">
-<section ng-controller = "TestCtrl">
+
+<!-- below was just testing Angular was set up
+ --><!-- <section ng-controller = "TestCtrl">
 	<h1>{{title}}</h1>
 	<div>
 		<ul ng-repeat = "test in tests">
@@ -13,7 +15,7 @@
 		</ul>
 
 	</div>
-</section>
+</section> -->
 
 <ng-view></ng-view>
 <h2>Hello World</h2>
@@ -21,16 +23,16 @@
 
 
 
-<!-- <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
 <script>
   // Initialize Firebase
-  // var config = {
-  //   apiKey: "AIzaSyDpnbWbyR7nyo_FcMW1kdT9gjsJPewOIHQ",
-  //   authDomain: "angweather-8c736.firebaseapp.com",
-  //   databaseURL: "https://angweather-8c736.firebaseio.com",
-  //   storageBucket: "angweather-8c736.appspot.com",
-  // };
-  // firebase.initializeApp(config);
+  var config = {
+    apiKey: "AIzaSyDpnbWbyR7nyo_FcMW1kdT9gjsJPewOIHQ",
+    authDomain: "angweather-8c736.firebaseapp.com",
+    databaseURL: "https://angweather-8c736.firebaseio.com",
+    storageBucket: "angweather-8c736.appspot.com",
+  };
+  firebase.initializeApp(config);
 </script>
     
 

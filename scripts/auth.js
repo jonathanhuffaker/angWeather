@@ -1,7 +1,5 @@
 var auth = angular.module('Authorize', ['firebase']);
 
-	var name;
-	var profilepic;
 	auth.factory("Auth", ["$firebaseAuth",
 	  function($firebaseAuth) {
 	    var ref = new Firebase("https://angweather-8c736.firebaseio.com");
@@ -25,16 +23,12 @@ var auth = angular.module('Authorize', ['firebase']);
 				}).then(function(userData){
 					
 					// Changing what i had originaly to reflect order by child - keeping old for safety
-					var ref = new Firebase("https://angweather-8c736.firebaseio.com/users/"+userData.uid);
-
-
+					var ref = new Firebase("https://angweather-8c736.firebaseio.com/users/"+userData.uid/userinfo);
 					ref.set({
 						email: $scope.email,
-						name: $scope.name,
-						uid: userData.uid,
-						
+						uid: userData.uid
+						});
 
-					});
 					console.log("user created with id:" +userData.uid);
   					$scope.loginUser();
 				}).catch(function(error){
